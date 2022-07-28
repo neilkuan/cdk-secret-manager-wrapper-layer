@@ -8,13 +8,13 @@ import { App, Stack, CfnOutput, Duration } from 'aws-cdk-lib';
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 import { Function, Runtime, Code, FunctionUrlAuthType } from 'aws-cdk-lib/aws-lambda';
 import { CfnSecret } from 'aws-cdk-lib/aws-secretsmanager';
-import { SecretManagerWrapperLayer } from './index';
+import { SecretManagerWrapperLayer } from 'cdk-secret-manager-wrapper-layer';
 const env = {
   region: process.env.CDK_DEFAULT_REGION,
   account: process.env.CDK_DEFAULT_ACCOUNT,
 };
-const mockApp = new App();
-const stack = new Stack(mockApp, 'testing-stack', { env });
+const app = new App();
+const stack = new Stack(app, 'testing-stack', { env });
 
 /**
  * Example create an Secret for testing.
