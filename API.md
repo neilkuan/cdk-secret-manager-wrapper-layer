@@ -109,6 +109,7 @@ permission on the layer version.
 | <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
 | <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.fromLayerVersionArn">fromLayerVersionArn</a></code> | Imports a layer version by ARN. |
 | <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.fromLayerVersionAttributes">fromLayerVersionAttributes</a></code> | Imports a Layer that has been defined externally. |
+| <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.getOrCreate">getOrCreate</a></code> | *No description.* |
 
 ---
 
@@ -223,6 +224,20 @@ the id of the imported layer in the construct tree.
 - *Type:* aws-cdk-lib.aws_lambda.LayerVersionAttributes
 
 the properties of the imported layer.
+
+---
+
+##### `getOrCreate` <a name="getOrCreate" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.getOrCreate"></a>
+
+```typescript
+import { SecretManagerWrapperLayer } from 'cdk-secret-manager-wrapper-layer'
+
+SecretManagerWrapperLayer.getOrCreate(scope: Construct)
+```
+
+###### `scope`<sup>Required</sup> <a name="scope" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.getOrCreate.parameter.scope"></a>
+
+- *Type:* constructs.Construct
 
 ---
 

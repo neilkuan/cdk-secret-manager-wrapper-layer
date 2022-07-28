@@ -1,4 +1,5 @@
-# `cdk-secret-manager-wrapper-layer` that Lambda layer uses a wrapper script to fetch information from Secrets Manager and create environmental variables.
+# `cdk-secret-manager-wrapper-layer` 
+that Lambda layer uses a wrapper script to fetch information from Secrets Manager and create environmental variables.
 > idea from [source](https://github.com/aws-samples/aws-lambda-environmental-variables-from-aws-secrets-manager)
 
 ## Example
