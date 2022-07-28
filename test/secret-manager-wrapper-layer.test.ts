@@ -1,6 +1,6 @@
 import * as path from 'path';
-import { DockerImage, Stack } from 'aws-cdk-lib';
-import { Template } from 'aws-cdk-lib/assertions';
+import { Template } from '@aws-cdk/assertions';
+import { DockerImage, Stack } from '@aws-cdk/core';
 import mock from 'mock-fs';
 import { SecretManagerWrapperLayer } from '../src';
 

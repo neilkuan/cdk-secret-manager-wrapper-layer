@@ -1,6 +1,6 @@
 const { awscdk } = require('projen');
 const project = new awscdk.AwsCdkConstructLibrary({
-  cdkVersion: '2.33.0',
+  cdkVersion: '1.165.0',
   defaultReleaseBranch: 'main',
   repository: 'https://github.com/neilkuan/cdk-secret-manager-wrapper-layer.git',
   authorName: 'Neil Kuan',
@@ -46,6 +46,13 @@ const project = new awscdk.AwsCdkConstructLibrary({
     '@types/mock-fs',
   ],
   typescriptVersion: '4.6',
+  cdkDependencies: [
+    '@aws-cdk/aws-iam',
+    '@aws-cdk/aws-secretsmanager',
+    '@aws-cdk/aws-lambda',
+    '@aws-cdk/core',
+    '@aws-cdk/assertions',
+  ],
 });
 
 const common_exclude = ['cdk.out', 'cdk.context.json', 'yarn-error.log', 'coverage', 'venv'];

@@ -1,7 +1,7 @@
-import { App, Stack, CfnOutput, Duration } from 'aws-cdk-lib';
-import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
-import { Function, Runtime, Code, FunctionUrlAuthType } from 'aws-cdk-lib/aws-lambda';
-import { CfnSecret } from 'aws-cdk-lib/aws-secretsmanager';
+import { Effect, PolicyStatement } from '@aws-cdk/aws-iam';
+import { Function, Runtime, Code, FunctionUrlAuthType } from '@aws-cdk/aws-lambda';
+import { CfnSecret } from '@aws-cdk/aws-secretsmanager';
+import { App, Stack, CfnOutput, Duration } from '@aws-cdk/core';
 import { SecretManagerWrapperLayer } from './index';
 const env = {
   region: process.env.CDK_DEFAULT_REGION,

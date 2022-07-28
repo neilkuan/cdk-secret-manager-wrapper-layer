@@ -4,7 +4,7 @@
 
 ### SecretManagerWrapperLayer <a name="SecretManagerWrapperLayer" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer"></a>
 
-An AWS SecretManager Wrapper layer that includes the AWS CLI, jq etc...
+An AWS SecretManager Wrapper layer.
 
 #### Initializers <a name="Initializers" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.Initializer"></a>
 
@@ -16,14 +16,14 @@ new SecretManagerWrapperLayer(scope: Construct, id: string)
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.Initializer.parameter.scope">scope</a></code> | <code>@aws-cdk/core.Construct</code> | *No description.* |
 | <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
 
 ---
 
 ##### `scope`<sup>Required</sup> <a name="scope" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.Initializer.parameter.scope"></a>
 
-- *Type:* constructs.Construct
+- *Type:* @aws-cdk/core.Construct
 
 ---
 
@@ -69,7 +69,7 @@ account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
 
 ###### `policy`<sup>Required</sup> <a name="policy" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.applyRemovalPolicy.parameter.policy"></a>
 
-- *Type:* aws-cdk-lib.RemovalPolicy
+- *Type:* @aws-cdk/core.RemovalPolicy
 
 ---
 
@@ -96,7 +96,7 @@ permission on the layer version.
 
 ###### `permission`<sup>Required</sup> <a name="permission" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.addPermission.parameter.permission"></a>
 
-- *Type:* aws-cdk-lib.aws_lambda.LayerVersionPermission
+- *Type:* @aws-cdk/aws-lambda.LayerVersionPermission
 
 ---
 
@@ -104,8 +104,7 @@ permission on the layer version.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
+| <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.isConstruct">isConstruct</a></code> | Return whether the given object is a Construct. |
 | <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
 | <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.fromLayerVersionArn">fromLayerVersionArn</a></code> | Imports a layer version by ARN. |
 | <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.fromLayerVersionAttributes">fromLayerVersionAttributes</a></code> | Imports a Layer that has been defined externally. |
@@ -113,7 +112,7 @@ permission on the layer version.
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.isConstruct"></a>
 
 ```typescript
 import { SecretManagerWrapperLayer } from 'cdk-secret-manager-wrapper-layer'
@@ -121,29 +120,11 @@ import { SecretManagerWrapperLayer } from 'cdk-secret-manager-wrapper-layer'
 SecretManagerWrapperLayer.isConstruct(x: any)
 ```
 
-Checks if `x` is a construct.
+Return whether the given object is a Construct.
 
 ###### `x`<sup>Required</sup> <a name="x" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.isConstruct.parameter.x"></a>
 
 - *Type:* any
-
-Any object.
-
----
-
-##### `isOwnedResource` <a name="isOwnedResource" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.isOwnedResource"></a>
-
-```typescript
-import { SecretManagerWrapperLayer } from 'cdk-secret-manager-wrapper-layer'
-
-SecretManagerWrapperLayer.isOwnedResource(construct: IConstruct)
-```
-
-Returns true if the construct was created by CDK, and false otherwise.
-
-###### `construct`<sup>Required</sup> <a name="construct" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.isOwnedResource.parameter.construct"></a>
-
-- *Type:* constructs.IConstruct
 
 ---
 
@@ -159,7 +140,7 @@ Check whether the given construct is a Resource.
 
 ###### `construct`<sup>Required</sup> <a name="construct" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.isResource.parameter.construct"></a>
 
-- *Type:* constructs.IConstruct
+- *Type:* @aws-cdk/core.IConstruct
 
 ---
 
@@ -221,7 +202,7 @@ the id of the imported layer in the construct tree.
 
 ###### `attrs`<sup>Required</sup> <a name="attrs" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.fromLayerVersionAttributes.parameter.attrs"></a>
 
-- *Type:* aws-cdk-lib.aws_lambda.LayerVersionAttributes
+- *Type:* @aws-cdk/aws-lambda.LayerVersionAttributes
 
 the properties of the imported layer.
 
@@ -237,7 +218,7 @@ SecretManagerWrapperLayer.getOrCreate(scope: Construct)
 
 ###### `scope`<sup>Required</sup> <a name="scope" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.getOrCreate.parameter.scope"></a>
 
-- *Type:* constructs.Construct
+- *Type:* @aws-cdk/core.Construct
 
 ---
 
@@ -245,23 +226,23 @@ SecretManagerWrapperLayer.getOrCreate(scope: Construct)
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
-| <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
+| <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.property.node">node</a></code> | <code>@aws-cdk/core.ConstructNode</code> | The construct tree node associated with this construct. |
+| <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.property.env">env</a></code> | <code>@aws-cdk/core.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.property.stack">stack</a></code> | <code>@aws-cdk/core.Stack</code> | The stack in which this resource is defined. |
 | <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.property.layerVersionArn">layerVersionArn</a></code> | <code>string</code> | The ARN of the Lambda Layer version that this Layer defines. |
-| <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.property.compatibleRuntimes">compatibleRuntimes</a></code> | <code>aws-cdk-lib.aws_lambda.Runtime[]</code> | The runtimes compatible with this Layer. |
+| <code><a href="#cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.property.compatibleRuntimes">compatibleRuntimes</a></code> | <code>@aws-cdk/aws-lambda.Runtime[]</code> | The runtimes compatible with this Layer. |
 
 ---
 
 ##### `node`<sup>Required</sup> <a name="node" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.property.node"></a>
 
 ```typescript
-public readonly node: Node;
+public readonly node: ConstructNode;
 ```
 
-- *Type:* constructs.Node
+- *Type:* @aws-cdk/core.ConstructNode
 
-The tree node.
+The construct tree node associated with this construct.
 
 ---
 
@@ -271,7 +252,7 @@ The tree node.
 public readonly env: ResourceEnvironment;
 ```
 
-- *Type:* aws-cdk-lib.ResourceEnvironment
+- *Type:* @aws-cdk/core.ResourceEnvironment
 
 The environment this resource belongs to.
 
@@ -290,7 +271,7 @@ that might be different than the stack they were imported into.
 public readonly stack: Stack;
 ```
 
-- *Type:* aws-cdk-lib.Stack
+- *Type:* @aws-cdk/core.Stack
 
 The stack in which this resource is defined.
 
@@ -314,7 +295,7 @@ The ARN of the Lambda Layer version that this Layer defines.
 public readonly compatibleRuntimes: Runtime[];
 ```
 
-- *Type:* aws-cdk-lib.aws_lambda.Runtime[]
+- *Type:* @aws-cdk/aws-lambda.Runtime[]
 
 The runtimes compatible with this Layer.
 
