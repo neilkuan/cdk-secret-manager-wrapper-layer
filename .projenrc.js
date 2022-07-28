@@ -45,7 +45,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     'mock-fs',
     '@types/mock-fs',
   ],
-  workflowNodeVersion: '14',
+  typescriptVersion: '4.6',
 });
 
 const common_exclude = ['cdk.out', 'cdk.context.json', 'yarn-error.log', 'coverage', 'venv'];
