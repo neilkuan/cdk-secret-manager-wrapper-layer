@@ -73,6 +73,7 @@
     },
     {
       "name": "mock-fs",
+      "version": "5.1.2",
       "type": "build"
     },
     {

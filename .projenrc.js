@@ -30,6 +30,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
     },
+    exclude: ['mock-fs'],
   },
   autoApproveOptions: {
     secret: 'GITHUB_TOKEN',
@@ -42,7 +43,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   workflowNodeVersion: '^14.17.0',
   devDeps: [
     'typescript@4.6',
-    'mock-fs',
+    'mock-fs@5.1.2',
     '@types/mock-fs',
   ],
   typescriptVersion: '4.6',
