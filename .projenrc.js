@@ -46,7 +46,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
     'mock-fs@5.1.2',
     '@types/mock-fs',
   ],
-  typescriptVersion: '4.6',
   cdkDependencies: [
     '@aws-cdk/aws-iam',
     '@aws-cdk/aws-secretsmanager',
@@ -54,8 +53,11 @@ const project = new awscdk.AwsCdkConstructLibrary({
     '@aws-cdk/core',
     '@aws-cdk/assertions',
   ],
+  typescriptVersion: '3.9.10',
 });
-
+project.package.addField('resolutions', {
+  got: '12.3.0',
+});
 const common_exclude = ['cdk.out', 'cdk.context.json', 'yarn-error.log', 'coverage', 'venv'];
 project.gitignore.exclude(...common_exclude, 'src/layer.zip');
 
