@@ -55,7 +55,7 @@
     "jsii-pacmak": "^1.74.0",
     "mock-fs": "5.1.2",
     "npm-check-updates": "^16",
-    "projen": "^0.67.28",
+    "projen": "^0.67.29",
     "standard-version": "^9",
     "ts-jest": "^27",
     "typescript": "3.9.10"
