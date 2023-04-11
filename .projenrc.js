@@ -46,12 +46,9 @@ const project = new awscdk.AwsCdkConstructLibrary({
     'mock-fs@5.1.2',
     '@types/mock-fs',
   ],
-  typescriptVersion: '3.9.10',
+  typescriptVersion: '^4.9',
 });
 
-project.package.addField('resolutions', {
-  got: '12.3.0',
-});
 
 const common_exclude = ['cdk.out', 'cdk.context.json', 'yarn-error.log', 'coverage', 'venv'];
 project.gitignore.exclude(...common_exclude, 'src/layer.zip');
