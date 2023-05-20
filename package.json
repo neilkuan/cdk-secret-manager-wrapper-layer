@@ -55,7 +55,7 @@
     "jsii-pacmak": "^1.81.0",
     "mock-fs": "5.1.2",
     "npm-check-updates": "^16",
-    "projen": "^0.71.62",
+    "projen": "^0.71.64",
     "standard-version": "^9",
     "ts-jest": "^27",
     "typescript": "^4.9"
@@ -76,8 +76,8 @@
     "@aws-cdk/core": "^1.165.0"
   },
   "resolutions": {
-    "@types/prettier": "2.6.0",
-    "@types/babel__traverse": "7.18.2"
+    "@types/babel__traverse": "7.18.2",
+    "@types/prettier": "2.6.0"
   },
   "keywords": [
     "aws",
