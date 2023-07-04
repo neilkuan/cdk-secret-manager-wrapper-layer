@@ -303,25 +303,25 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --dep dev --upgrade --target=minor --reject='jsii,mock-fs'"
+          "exec": "npm-check-updates --dep dev --upgrade --target=minor --reject='jsii-rosetta,jsii,mock-fs'"
         },
         {
-          "exec": "npm-check-updates --dep optional --upgrade --target=minor --reject='jsii,mock-fs'"
+          "exec": "npm-check-updates --dep optional --upgrade --target=minor --reject='jsii-rosetta,jsii,mock-fs'"
         },
         {
-          "exec": "npm-check-updates --dep peer --upgrade --target=minor --reject='jsii,mock-fs'"
+          "exec": "npm-check-updates --dep peer --upgrade --target=minor --reject='jsii-rosetta,jsii,mock-fs'"
         },
         {
-          "exec": "npm-check-updates --dep prod --upgrade --target=minor --reject='jsii,mock-fs'"
+          "exec": "npm-check-updates --dep prod --upgrade --target=minor --reject='jsii-rosetta,jsii,mock-fs'"
         },
         {
-          "exec": "npm-check-updates --dep bundle --upgrade --target=minor --reject='jsii,mock-fs'"
+          "exec": "npm-check-updates --dep bundle --upgrade --target=minor --reject='jsii-rosetta,jsii,mock-fs'"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @types/jest @types/mock-fs @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint jest-junit jest jsii-diff jsii-docgen jsii-pacmak jsii npm-check-updates projen standard-version ts-jest typescript @aws-cdk/assertions @aws-cdk/aws-iam @aws-cdk/aws-lambda @aws-cdk/aws-secretsmanager @aws-cdk/core constructs @aws-cdk/assertions @aws-cdk/aws-iam @aws-cdk/aws-lambda @aws-cdk/aws-secretsmanager @aws-cdk/core @aws-cdk/assert @aws-cdk/assertions"
+          "exec": "yarn upgrade @types/jest @types/mock-fs @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint jest-junit jest jsii-diff jsii-docgen jsii-pacmak jsii-rosetta jsii npm-check-updates projen standard-version ts-jest typescript @aws-cdk/assertions @aws-cdk/aws-iam @aws-cdk/aws-lambda @aws-cdk/aws-secretsmanager @aws-cdk/core constructs @aws-cdk/assertions @aws-cdk/aws-iam @aws-cdk/aws-lambda @aws-cdk/aws-secretsmanager @aws-cdk/core @aws-cdk/assert @aws-cdk/assertions"
         },
         {
           "exec": "npx projen"
