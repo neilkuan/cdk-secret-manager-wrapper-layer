@@ -39,7 +39,7 @@
     "@aws-cdk/assert": "^1.165.0",
     "@aws-cdk/assertions": "^1.165.0",
     "@types/jest": "^27",
-    "@types/mock-fs": "^4.13.2",
+    "@types/mock-fs": "^4.13.3",
     "@types/node": "^16",
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
@@ -56,7 +56,7 @@
     "jsii-rosetta": "1.x",
     "mock-fs": "5.1.2",
     "npm-check-updates": "^16",
-    "projen": "^0.75.1",
+    "projen": "^0.75.2",
     "standard-version": "^9",
     "ts-jest": "^27",
     "typescript": "^4.9"
