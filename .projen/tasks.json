@@ -308,7 +308,7 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/mock-fs,eslint-import-resolver-typescript,eslint-plugin-import,jsii-diff,jsii-pacmak,projen"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@types/mock-fs,eslint-import-resolver-typescript,eslint-plugin-import,jsii-diff,jsii-pacmak,projen"
         },
         {
           "exec": "yarn install --check-files"
