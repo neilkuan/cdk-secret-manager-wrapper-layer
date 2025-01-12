@@ -40,7 +40,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     distName: 'cdk-secret-manager-wrapper-layer',
     module: 'cdk_secret_manager_wrapper_layer',
   },
-  workflowNodeVersion: '^18',
+  workflowNodeVersion: '^20',
   devDeps: [
     'typescript@4.6',
     'mock-fs@5.1.2',
