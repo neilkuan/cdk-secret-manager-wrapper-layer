@@ -1,6 +1,6 @@
 import { App, Stack, CfnOutput, Duration } from 'aws-cdk-lib';
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
-import { Function, Runtime, Code, FunctionUrlAuthType } from 'aws-cdk-lib/aws-lambda';
+import { Function, Runtime, Code, FunctionUrlAuthType, Architecture } from 'aws-cdk-lib/aws-lambda';
 import { CfnSecret } from 'aws-cdk-lib/aws-secretsmanager';
 import { SecretManagerWrapperLayer } from './index';
 const env = {
@@ -13,7 +13,7 @@ const stack = new Stack(mockApp, 'testing-stack', { env });
 /**
  * Example create an Secret for testing.
  */
-const secret = new CfnSecret(stack, 'Mysecret', {
+const secret = new CfnSecret(stack, 'MySecret', {
   secretString: JSON.stringify({
     KEY1: 'VALUE1',
     KEY2: 'VALUE2',
@@ -21,21 +21,25 @@ const secret = new CfnSecret(stack, 'Mysecret', {
   }),
 });
 
-const layer = new SecretManagerWrapperLayer(stack, 'SecretManagerWrapperLayer');
+const lambdaArchitecture = Architecture.ARM_64;
+
+const layer = new SecretManagerWrapperLayer(stack, 'SecretManagerWrapperLayer', {
+  lambdaArchitecture,
+});
 
 const lambda = new Function(stack, 'fn', {
-  runtime: Runtime.PYTHON_3_9,
+  runtime: Runtime.PYTHON_3_13,
   code: Code.fromInline(`
 import os
-def hander(events, contexts):
+def handler(events, contexts):
     env = {}
     env['KEY1'] = os.environ.get('KEY1', 'Not Found')
     env['KEY2'] = os.environ.get('KEY2', 'Not Found')
     env['KEY3'] = os.environ.get('KEY3', 'Not Found')
     return env
     `),
-  handler: 'index.hander',
-  layers: [layer],
+  handler: 'index.handler',
+  layers: [layer.layerVersion],
   timeout: Duration.minutes(1),
   /**
    * you need to define this 4 environment various.
@@ -46,6 +50,7 @@ def hander(events, contexts):
     SECRET_ARN: secret.ref,
     API_TIMEOUT: '5000',
   },
+  architecture: lambdaArchitecture,
 });
 
 /**
