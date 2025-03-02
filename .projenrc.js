@@ -39,6 +39,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     'typescript@4.6',
     'mock-fs@5.1.2',
     '@types/mock-fs',
+    'ts-node',
   ],
   typescriptVersion: '^4.9',
 });
