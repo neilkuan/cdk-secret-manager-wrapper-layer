@@ -1,6 +1,6 @@
 const { awscdk } = require('projen');
 const project = new awscdk.AwsCdkConstructLibrary({
-  cdkVersion: '2.33.0',
+  cdkVersion: '2.181.0',
   defaultReleaseBranch: 'main',
   repository: 'https://github.com/neilkuan/cdk-secret-manager-wrapper-layer.git',
   authorName: 'Neil Kuan',
