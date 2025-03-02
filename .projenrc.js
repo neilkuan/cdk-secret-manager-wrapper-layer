@@ -18,12 +18,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
    */
   majorVersion: 2,
   defaultReleaseBranch: 'main',
-  /**
-    * we also release the cdkv1 branch with major version 1.
-    */
-  releaseBranches: {
-    cdkv1: { npmDistTag: 'cdkv1', majorVersion: 1 },
-  },
   autoDetectBin: false,
   depsUpgradeOptions: {
     ignoreProjen: false,
