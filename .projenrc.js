@@ -44,6 +44,11 @@ const project = new awscdk.AwsCdkConstructLibrary({
   typescriptVersion: '^4.9',
 });
 
+const eslintrc = project.tryFindObjectFile('.eslintrc.json');
+eslintrc.addOverride('parserOptions.projectService', {
+  allowDefaultProject: ['.projenrc.js'],
+  defaultProject: './tsconfig.json',
+});
 
 const common_exclude = ['cdk.out', 'cdk.context.json', 'yarn-error.log', 'coverage', 'venv'];
 project.gitignore.exclude(...common_exclude, 'src/layer.zip');
