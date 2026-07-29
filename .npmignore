@@ -18,7 +18,6 @@ dist
 /.github/
 /.vscode/
 /.idea/
-/.projenrc.js
 tsconfig.tsbuildinfo
 /.eslintrc.json
 !.jsii
@@ -29,3 +28,4 @@ coverage
 venv
 image
 /.gitattributes
+/.projenrc.js
