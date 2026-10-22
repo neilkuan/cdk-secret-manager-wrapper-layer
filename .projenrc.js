@@ -11,6 +11,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     twitter: 'neil_kuan',
     announce: false,
   },
+  packageManager: 'yarn_classic',
   compat: true,
   stability: 'experimental',
   /**
@@ -34,7 +35,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     distName: 'cdk-secret-manager-wrapper-layer',
     module: 'cdk_secret_manager_wrapper_layer',
   },
-  workflowNodeVersion: '^20',
+  workflowNodeVersion: '^24',
   devDeps: [
     'typescript@4.6',
     'mock-fs@5.1.2',
