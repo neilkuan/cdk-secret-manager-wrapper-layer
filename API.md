@@ -4,6 +4,8 @@
 
 ### SecretManagerWrapperLayer <a name="SecretManagerWrapperLayer" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 #### Initializers <a name="Initializers" id="cdk-secret-manager-wrapper-layer.SecretManagerWrapperLayer.Initializer"></a>
 
 ```typescript
